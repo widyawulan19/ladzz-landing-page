@@ -9,7 +9,6 @@ const Navbar = ()=> {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -19,19 +18,23 @@ const Navbar = ()=> {
       <div className="nav-container">
         <div className="logo">LADZZ BOUTIQUE</div>
 
-        <div className="nav-links">
-          <a href="#about">About</a>
-          <a href="#collection">Collection</a>
-          <a href="#investment">Lookbook</a>
-          <a  href="https://wa.me/message/6663KZLPCMINH1"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="nav-cta">
-              Shop
+        {/* LINKS */}
+        <div className={`nav-links ${menuOpen ? "active" : ""}`}>
+          <a href="#about" onClick={() => setMenuOpen(false)}>About</a>
+          <a href="#collection" onClick={() => setMenuOpen(false)}>Collection</a>
+          <a href="#investment" onClick={() => setMenuOpen(false)}>Lookbook</a>
+          <a
+            href="https://wa.me/message/6663KZLPCMINH1"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="nav-cta"
+            onClick={() => setMenuOpen(false)}
+          >
+            Shop
           </a>
         </div>
 
-        {/* Hamburger */}
+        {/* HAMBURGER */}
         <div 
           className={`hamburger ${menuOpen ? "open" : ""}`} 
           onClick={() => setMenuOpen(!menuOpen)}
@@ -40,10 +43,16 @@ const Navbar = ()=> {
           <span></span>
           <span></span>
         </div>
+
+        {/* CLOSE ICON */}
+        {menuOpen && (
+          <div className="close-btn" onClick={() => setMenuOpen(false)}>
+            ✕
+          </div>
+        )}
       </div>
     </nav>
   );
 }
-
 
 export default Navbar;
