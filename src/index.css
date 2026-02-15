@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+:root {
+  /* === Primary Palette (Luxury Warm) === */
+  --color-linen: #F5F1EA;
+  --color-khaki: #D7C9B8;
+  --color-camel: #B2967D;
+  --color-cocoa: #7D5A44;
+  --color-espresso: #4A342A;
+
+  /* === Semantic Usage === */
+  --color-background: var(--color-linen);
+  --color-surface: var(--color-khaki);
+  --color-primary: var(--color-camel);
+  --color-accent: var(--color-cocoa);
+  --color-heading: var(--color-espresso);
+  --color-text: #3A2A22;
+  --color-border: #E8E1D8;
+
+  /* === Optional Luxury Gold Accent === */
+  --color-gold-soft: #C6A75E;
+}

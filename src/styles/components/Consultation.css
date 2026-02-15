@@ -1,0 +1,44 @@
+.consultation {
+    padding: 180px 20px;
+    background: var(--color-heading);
+    color: var(--color-linen);
+    text-align: center;
+}
+
+.consultation-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.consultation h2 {
+    font-size: 48px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.consultation p {
+    font-size: 16px;
+    opacity: 0.8;
+    margin-bottom: 50px;
+    line-height: 1.8;
+}
+
+.consultation-btn {
+    padding: 14px 40px;
+    background: transparent;
+    border-radius: 8px;
+    border: 1px solid var(--color-linen);
+    color: var(--color-linen);
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    text-decoration: none;
+}
+
+.consultation-btn:hover {
+    background: var(--color-camel);
+    color: var(--color-text);
+}

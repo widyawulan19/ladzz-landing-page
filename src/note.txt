@@ -1,0 +1,123 @@
+1️⃣ Hero
+
+Background: image + overlay rgba(74,52,42,0.35)
+
+Text: Linen
+
+Button: Espresso bg + Linen text
+
+2️⃣ About Section
+
+Background: Linen
+
+Heading: Espresso
+
+Text: Cocoa
+
+3️⃣ Featured Collection
+
+Background: Khaki
+
+Card background: Linen
+
+Price text: Espresso
+
+Hover accent: Camel
+
+4️⃣ Lookbook / Editorial
+
+Background: Espresso
+
+Text: Linen
+
+Button outline: Linen border
+
+5️⃣ Testimonial
+
+Background: Linen
+
+Quote text: Cocoa
+
+Author name: Espresso
+
+6️⃣ CTA Section
+
+Background: Camel
+
+Text: Espresso
+
+Button: Espresso bg + Linen text
+
+🖋 TYPOGRAPHY (Luxury Pairing)
+
+Gunakan Google Fonts:
+
+Heading (Elegan Serif)
+
+Playfair Display
+atau
+
+Cormorant Garamond
+
+Body (Clean & Premium)
+
+Inter
+atau
+
+DM Sans
+
+Example pairing:
+
+Heading → Playfair Display
+Body → Inter
+
+
+Luxury typography rules:
+
+Banyak letter spacing
+
+Heading uppercase kecil
+
+Jangan bold berlebihan
+
+Gunakan font-weight 400–500
+
+📏 SPACING SYSTEM (biar terasa mahal)
+
+Luxury = napas panjang.
+
+Section padding: 120px 0
+Container width: 1200px
+Text max width: 600px
+Gap grid: 40px
+
+
+Jangan mepet-mepet. Mahal itu lega.
+
+
+
+💡 Extra Luxury Tips
+
+Untuk tema boutique mewah:
+
+Gunakan banyak whitespace
+
+Jangan terlalu banyak warna dalam 1 section
+
+Gunakan serif font elegan (Playfair, Cormorant, atau Canela style)
+
+Hindari pure black (#000000)
+
+Hindari putih terlalu putih (#FFFFFF)
+
+Luxury itu bukan rame.
+Luxury itu confident dan tenang.
+
+
+
+Linen     #F5F1EA
+Khaki     #D7C9B8
+Camel     #B2967D
+Cocoa     #7D5A44
+Espresso  #4A342A 
+
