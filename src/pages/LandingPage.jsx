@@ -13,7 +13,7 @@ import ToggleMusic from '../components/ToggleMusic'
 
 const LandingPage=()=> {
   return (
-        <>
+        <div>
           <Navbar />
           <Hero />
           <ToggleMusic/>
@@ -24,7 +24,7 @@ const LandingPage=()=> {
           <Investment />
           <Consultation />
           <Footer />
-        </>
+        </div>
   )
 }
 
