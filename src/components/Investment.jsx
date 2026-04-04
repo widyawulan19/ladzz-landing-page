@@ -94,8 +94,13 @@ const Investment = () => {
 
         <div className="investment-grid">
 
-          {categories.map((category) => (
-            <div className="investment-card" data-aos='fade-up' key={category.id}>
+          {categories.map((category,index) => (
+            <div 
+              className="investment-card" 
+              data-aos='fade-up'
+              data-aos-delay={index * 200} 
+              key={category.id}
+            >
                 <img src={category.img} alt="" />
                 <div className="category-caption">
                     <h3>{category.name}</h3>

@@ -269,6 +269,20 @@ EXAMPLE
     .item.large {
         grid-row: auto;
     }
+
+    .collection-header {
+        margin-bottom: 50px;
+    }
+
+    .collection-header h2 {
+        font-size: 28px;
+        line-height: 1.25;
+        margin-top: 10px;
+    }
+
+    .collection-header p {
+        font-size: 13px;
+    }
 }
 
 @media (max-width: 768px) {

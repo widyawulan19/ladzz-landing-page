@@ -188,6 +188,10 @@ SMALL MOBILE
         padding: 30px 5%;
     }
 
+    .footer-container {
+        gap: 20px;
+    }
+
     .footer-label {
         font-size: 11px;
         letter-spacing: 2px;
@@ -197,9 +201,18 @@ SMALL MOBILE
         font-size: 15px;
     }
 
-    .footer-address,
     .footer-hours p {
         font-size: 13px;
+    }
+
+    .footer-contact {
+        gap: 5px;
+    }
+
+    .footer-address {
+        font-size: 13px;
+        line-height: 1.3;
+        padding: 0px 5px;
     }
 
     .media-icon .icon {

@@ -1,0 +1,98 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 24px 0;
+    transition: 0.4s ease;
+    background: transparent;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    letter-spacing: 3px;
+    color: var(--color-linen);
+}
+
+.navbar.scrolled {
+    background: var(--background-white);
+}
+
+.navbar.menu-open {
+    background: var(--background-white);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    z-index: 1200;
+}
+
+.hamburger span {
+    width: 24px;
+    height: 2px;
+    background: var(--color-linen);
+    transition: 0.4s ease;
+}
+
+/* SCROLL STATE */
+.navbar.scrolled .hamburger span {
+    background: var(--color-espresso);
+}
+
+/* OPEN STATE (jadi X) */
+.hamburger.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+@media (max-width: 900px) {
+
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        height: 100vh;
+        background: var(--background-white);
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        padding: 100px 30px;
+
+        transition: 0.4s ease;
+        z-index: 1100;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links a {
+        color: var(--color-espresso);
+        font-size: 16px;
+    }
+
+    /* WARNA SAAT MENU OPEN */
+    .navbar.menu-open .hamburger span {
+        background: var(--color-espresso);
+    }
+
+}

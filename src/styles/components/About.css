@@ -100,11 +100,11 @@
         margin: 0 auto;
     }
 
-    .about-content h2 {
+    .about-content .highlight-text {
         font-size: 24px;
     }
 
-    .about-content h2::after {
+    .about-content .highlight-text::after {
         width: 100%;
     }
 
@@ -112,3 +112,5 @@
         font-size: 13px;
     }
 }
+
+@media (max-width:550px) {}

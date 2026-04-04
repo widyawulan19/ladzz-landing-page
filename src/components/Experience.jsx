@@ -27,7 +27,6 @@ const Experience = () => {
         </div>
 
         <div className="experience-steps">
-
           <div className="step" data-aos='fade-up' data-aos-delay='0'>
             <span className="step-number">01</span>
             <h3>Private Consultation</h3>

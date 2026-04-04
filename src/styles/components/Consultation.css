@@ -99,3 +99,23 @@
 .consultation-btn:hover {
     box-shadow: 0 10px 40px #ffffff3a;
 }
+
+@media (max-width:600px) {
+    .consultation {
+        padding: 110px 20px;
+    }
+
+    .consultation-content span {
+        font-size: 15px;
+    }
+
+    .consultation h2 {
+        font-size: 28px;
+        line-height: 1.25;
+    }
+
+    .consultation p {
+        font-size: 13px;
+        line-height: 1.3;
+    }
+}

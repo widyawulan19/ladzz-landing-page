@@ -23,7 +23,8 @@ const Collection = () => {
   useEffect(()=>{
     AOS.init({
       duration:1000,
-      once:false
+      once:true,
+      easing: "ease-out-cubic"
     })
     AOS.refresh();
   },[])
@@ -38,57 +39,34 @@ const Collection = () => {
             <p data-aos='fade-up' data-aos-delay='400'>Discover our most refined silhouettes of the season.</p>
         </div>
 
-        {/* <div className="collection-grid">
-
-          <div className="item large" data-aos='fade-right'>
-            <img src={collection1} alt="Look 1" />
-            <div className="item-info">
-              <h3>Linen Tailored Dress</h3>
-              <span>$320</span>
-            </div>
-          </div>
-
-          <div className="item">
-            <img src={collection2} alt="Look 2" />
-            <div className="item-info">
-              <h3>Structured Blazer</h3>
-              <span>$280</span>
-            </div>
-          </div>
-
-          <div className="item">
-            <img src={collection3} alt="Look 3" />
-            <div className="item-info">
-              <h3>Silk Evening Top</h3>
-              <span>$190</span>
-            </div>
-          </div>
-
-        </div> */}
-
         <div className="collection-grid-box">
           <div className="grid-left">
+
             <div className="left-up">
-              <img src={coll1} alt="" />
-              <img src={coll3} alt="" />
-              <img src={coll2} alt="" />
+              <img src={coll1} alt="" data-aos="fade-up" data-aos-delay="0"/>
+              <img src={coll3} alt="" data-aos="fade-up" data-aos-delay="100"/>
+              <img src={coll2} alt="" data-aos="fade-up" data-aos-delay="200"/>
             </div>
 
             <div className="left-bottom">
-              <img src={coll4} alt="" />
+              <img src={coll4} alt="" data-aos="fade-right" data-aos-delay="300"/>
             </div>
+
           </div>
 
           <div className="grid-right">
+
             <div className="right-up">
-              <img src={coll7} alt="" />
+              <img src={coll7} alt="" data-aos="fade-left" data-aos-delay="200"/>
             </div>
 
             <div className="right-bottom">
-              <img src={coll5} alt="" />
-              <img src={coll6} alt="" />
+              <img src={coll5} alt="" data-aos="fade-up" data-aos-delay="300"/>
+              <img src={coll6} alt="" data-aos="fade-up" data-aos-delay="400"/>
             </div>
+
           </div>
+
         </div>
 
         <div className="collection-footer" data-aos='fade-up'>
