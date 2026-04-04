@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../styles/components/Footer.css";
 import logo from '../assets/logo2.png'
 import { RiInstagramFill } from "react-icons/ri";
 import { IoLogoTiktok, IoLogoWhatsapp } from "react-icons/io5";
 import { SiShopee } from "react-icons/si";
+import AOS from 'aos'
 
 const Footer = () => {
 
@@ -39,6 +40,14 @@ const handleInstagramClick = () =>{
     );
 }
 
+useEffect(()=>{
+  AOS.init({
+    duration:1000,
+    once:false
+  })
+  AOS.refresh();
+},[])
+
 
 
   return (
@@ -46,7 +55,7 @@ const handleInstagramClick = () =>{
 
       <div className="footer-container">
 
-        <div className="footer-contact">
+        <div className="footer-contact" data-aos='fade-up' data-aos-delay='0'>
             <span className="footer-label">Contact</span>
 
             <p className="footer-phone">
@@ -60,7 +69,7 @@ const handleInstagramClick = () =>{
             </p>
         </div>
 
-        <div className="footer-brand">
+        <div className="footer-brand" data-aos='fade-up' data-aos-delay='300'>
           <img src={logo} alt="" />
           <div className="media-icon">
             <RiInstagramFill onClick={handleInstagramClick} className="icon"/>
@@ -70,7 +79,7 @@ const handleInstagramClick = () =>{
           </div>
         </div>
 
-        <div className="footer-social">
+        <div className="footer-social" data-aos='fade-up' data-aos-delay='600'>
             <span className="footer-label">Store Hours</span>
 
             <div className="footer-hours">

@@ -9,19 +9,21 @@ import Experience from '../components/Experience'
 import Investment from '../components/Investment'
 import Consultation from '../components/Consultation'
 import Footer from '../components/Footer'
+import ToggleMusic from '../components/ToggleMusic'
 
 const LandingPage=()=> {
   return (
         <>
-            <Navbar />
-        <Hero />
-        <About />
-        <Collection />
-        <Lookbook />
-        <Experience />
-        <Investment />
-        <Consultation />
-        <Footer />
+          <Navbar />
+          <Hero />
+          <ToggleMusic/>
+          <About />
+          <Collection />
+          <Lookbook />
+          <Experience />
+          <Investment />
+          <Consultation />
+          <Footer />
         </>
   )
 }

@@ -1,8 +1,59 @@
 .consultation {
     padding: 180px 20px;
-    background: var(--color-heading);
-    color: var(--color-linen);
+    background: radial-gradient(circle at top,
+            #303030 0%,
+            #000000 60%);
+    /* background: var(--color-primary); */
+    color: var(--color-line);
     text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    position: relative;
+    overflow: hidden;
+}
+
+
+.consultation::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -120%;
+    width: 80%;
+    height: 200%;
+
+    background: linear-gradient(120deg,
+            transparent,
+            rgba(255, 255, 255, 0.08),
+            transparent);
+
+    filter: blur(60px);
+    /* INI KUNCI 🔥 */
+
+    animation: sweepBg 6s ease-in-out infinite;
+}
+
+/* ANIMATION */
+@keyframes sweepBg {
+    0% {
+        left: -100%;
+    }
+
+    100% {
+        left: 120%;
+    }
+}
+
+.consultation-section {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle,
+            rgba(255, 255, 255, 0.08),
+            transparent 70%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: blur(80px);
 }
 
 .consultation-content {
@@ -10,11 +61,17 @@
     margin: 0 auto;
 }
 
+.consultation-content span {
+    letter-spacing: 2px;
+
+}
+
 .consultation h2 {
     font-size: 48px;
     font-family: 'Playfair Display', serif;
     font-weight: 500;
     margin-bottom: 30px;
+    letter-spacing: 1;
 }
 
 .consultation p {
@@ -26,12 +83,13 @@
 
 .consultation-btn {
     padding: 14px 40px;
-    background: transparent;
+    background: var(--color-bg-card);
     border-radius: 8px;
     border: 1px solid var(--color-linen);
-    color: var(--color-linen);
+    color: var(--color-text);
     font-size: 14px;
-    letter-spacing: 2px;
+    font-weight: bold;
+    letter-spacing: 1px;
     text-transform: uppercase;
     cursor: pointer;
     transition: all 0.4s ease;
@@ -39,6 +97,5 @@
 }
 
 .consultation-btn:hover {
-    background: var(--color-camel);
-    color: var(--color-text);
+    box-shadow: 0 10px 40px #ffffff3a;
 }

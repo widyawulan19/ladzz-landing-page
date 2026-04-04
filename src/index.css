@@ -1,10 +1,11 @@
-body {
+ebody {
   margin: 0;
   font-family: 'Inter', sans-serif;
   font-weight: 300;
   letter-spacing: 0.5px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: var(--background-white);
 }
 
 code {
@@ -46,4 +47,61 @@ html {
 
   /* === Optional Luxury Gold Accent === */
   --color-gold-soft: #C6A75E;
+
+  --background-white: #FFFFFF;
+
+
+  /* =======================
+  LIGHT
+  ======================= */
+  /* ===== COLORS ===== */
+
+  --color-bg: #ffffff;
+  --color-bg-soft: #f5f5f5;
+  --color-bg-card: #fafafa;
+
+  --color-text: #111111;
+  --color-text-soft: #555555;
+  --color-text-muted: #888888;
+
+  --color-border: #e5e5e5;
+  --color-line: #dcdcdc;
+
+  --color-primary: #000000;
+  --color-secondary: #333333;
+
+  --color-accent: #111111;
+  --color-hover: #222222;
+
+  /* ===== BUTTON ===== */
+
+  --btn-bg: #000000;
+  --btn-text: #ffffff;
+  --btn-hover: #222222;
+
+  /* ===== SHADOW ===== */
+
+  --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.05);
+  --shadow-medium: 0 6px 30px rgba(0, 0, 0, 0.08);
+  --shadow-large: 0 10px 40px rgba(0, 0, 0, 0.12);
+
+  /* ===== FONT ===== */
+
+  --font-title: "Playfair Display", serif;
+  --font-body: "Inter", sans-serif;
+
+  /* ===== SPACING ===== */
+
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 32px;
+  --space-xl: 64px;
+
+  /* ===== RADIUS ===== */
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+
 }

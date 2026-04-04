@@ -1,11 +1,35 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../styles/components/Consultation.css";
+import AOS from 'aos'
+
+ const consultationList = [
+  {
+    id:1,
+    title:'Private Viewing',
+    desc:'Enjoy an exclusive evening at our Ladzz flagship, curated specifically for your sartorial preferences.'
+  },
+  {
+    id:2,
+    title:'Global Concierge',
+    desc:'Seamless delivery and white-glove service to any corner of the globe. Your time is our priority.'
+  }
+]
 
 const Consultation = () => {
+  useEffect(()=>{
+    AOS.init({
+      duration:1000,
+      once:false
+    })
+    AOS.refresh();
+  },[])
+
+
   return (
     <section className="consultation">
-      <div className="consultation-content">
-        <h2>Begin Your Couture Journey</h2>
+      <div className="consultation-content" data-aos='zoom-in'>
+         <span>CONSULTATION</span>
+        <h2>A Personal Connection</h2>
         <p>
           Experience a private consultation where every detail is crafted
           exclusively for you.
@@ -17,7 +41,7 @@ const Consultation = () => {
           rel="noopener noreferrer"
           className="consultation-btn"
         >
-          Book Private Consultation
+          Book Appointment
         </a>
       </div>
     </section>

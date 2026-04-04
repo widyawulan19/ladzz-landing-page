@@ -1,6 +1,7 @@
 import '../styles/components/Lookbook.css'
 import lb1 from '../assets/lb2.jpeg'
 import { useEffect, useState } from 'react';
+import AOS from 'aos'
 
 const Lookbook=()=> {
 
@@ -15,15 +16,24 @@ const Lookbook=()=> {
       return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
+      useEffect(()=>{
+        AOS.init({
+          duration:1000,
+          once:false
+        })
+        AOS.refresh();
+      },[])
+    
+
   return (
     <section className="lookbook" id='lookbook'>
       <div className="lookbook-container">
 
-        <div className="lookbook-image">
-          <img src={lb1} alt="Editorial Look" />
+        <div className="lookbook-image" data-aos='zoom-in'>
+          <img src={lb1} alt="Editorial Look"/>
         </div>
 
-        <div className="lookbook-content">
+        <div className="lookbook-content" data-aos='fade-up'>
           <span className="section-label light">Editorial</span>
           <h2>The Art of Refined Silhouettes</h2>
           <p>

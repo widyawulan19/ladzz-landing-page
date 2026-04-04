@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import '../styles/components/Investment.css'
 import wg from '../assets/wg.png'
 import ng from '../assets/ng.png'
@@ -8,6 +8,7 @@ import suite from '../assets/suite.png'
 import parfume from '../assets/parfume2.jpeg'
 import bouqet from '../assets/bouqet.jpeg'
 import lb from '../assets/lb5.png'
+import AOS from 'aos'
 
 
 const categories = [
@@ -53,31 +54,40 @@ const categories = [
     buy: "",
     img: lb
   },
-  {
-    id: 7,
-    name: "Parfume",
-    rent: "",
-    buy: "",
-    img: parfume
-  },
-{
-    id: 8,
-    name: "Bouquets",
-    rent: "",
-    buy: "",
-    img: bouqet
-  }
+//   {
+//     id: 7,
+//     name: "Parfume",
+//     rent: "",
+//     buy: "",
+//     img: parfume
+//   },
+// {
+//     id: 8,
+//     name: "Bouquets",
+//     rent: "",
+//     buy: "",
+//     img: bouqet
+//   }
 ];
 
 const Investment = () => {
+
+  useEffect(()=>{
+    AOS.init({
+      duration:1000,
+      once:false
+    })
+    AOS.refresh();
+  },[])
+
   return (
     <section className="investment" id='investment'>
       <div className="investment-container">
 
-        <h2 className="investment-title">Lookbook</h2>
-        <div className="divider"></div>
+        <h2 className="investment-title" data-aos='fade-up'>Lookbook</h2>
+        <div className="divider" data-aos='fade-up'></div>
 
-        <p className="investment-desc">
+        <p className="investment-desc" data-aos='fade-up'>
           Each piece is thoughtfully crafted and tailored exclusively for you.
           Below is the starting investment for each category.
         </p>
@@ -85,7 +95,7 @@ const Investment = () => {
         <div className="investment-grid">
 
           {categories.map((category) => (
-            <div className="investment-card" key={category.id}>
+            <div className="investment-card" data-aos='fade-up' key={category.id}>
                 <img src={category.img} alt="" />
                 <div className="category-caption">
                     <h3>{category.name}</h3>

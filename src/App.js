@@ -11,6 +11,8 @@ import Consultation from './components/Consultation';
 import Footer from './components/Footer';
 import { BrowserRouter } from 'react-router-dom';
 import AppRouter from './Router/AppRouter';
+import AOS from 'aos'
+import "aos/dist/aos.css";
 
 function App() {
   return (

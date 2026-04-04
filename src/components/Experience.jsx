@@ -1,11 +1,23 @@
+import { useEffect } from 'react';
 import '../styles/components/Experience.css'
+import AOS from 'aos'
 
 const Experience = () => {
+
+
+  useEffect(()=>{
+    AOS.init({
+      duration:1000,
+      once:false
+    })
+    AOS.refresh();
+  },[])
+
   return (
     <section className="experience">
       <div className="experience-container">
 
-        <div className="experience-header">
+        <div className="experience-header" data-aos='fade-up'>
           <span className="section-label">Our Process</span>
           <h2>The Experience</h2>
           <p>
@@ -16,7 +28,7 @@ const Experience = () => {
 
         <div className="experience-steps">
 
-          <div className="step">
+          <div className="step" data-aos='fade-up' data-aos-delay='0'>
             <span className="step-number">01</span>
             <h3>Private Consultation</h3>
             <p>
@@ -25,7 +37,7 @@ const Experience = () => {
             </p>
           </div>
 
-          <div className="step">
+          <div className="step" data-aos='fade-up' data-aos-delay='300'>
             <span className="step-number">02</span>
             <h3>Design & Craft</h3>
             <p>
@@ -34,7 +46,7 @@ const Experience = () => {
             </p>
           </div>
 
-          <div className="step">
+          <div className="step" data-aos='fade-up' data-aos-delay='600'>
             <span className="step-number">03</span>
             <h3>Personal Fitting</h3>
             <p>
@@ -43,7 +55,7 @@ const Experience = () => {
             </p>
           </div>
 
-          <div className="step">
+          <div className="step" data-aos='fade-up' data-aos-delay='900'>
             <span className="step-number">04</span>
             <h3>Final Touch</h3>
             <p>

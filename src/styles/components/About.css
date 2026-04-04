@@ -1,43 +1,80 @@
 .about {
+    /* border: 1px solid blue; */
     padding: 100px 0;
-    background: var(--color-background);
+    background: var(--background-white);
 }
 
 .about-container {
     width: 1200px;
     max-width: 90%;
+    padding: 2px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 80px;
     align-items: center;
-    /* border: 1px solid red; */
+    border: 1px solid var(--color-bg-card);
+    border-radius: 4px;
+    box-shadow: var(--shadow-soft);
 }
+
+.about-image {}
 
 .about-image img {
     width: 100%;
-    height: 600px;
+    height: 500px;
     object-fit: cover;
-    border-top-left-radius: 99px;
-    border-top-right-radius: 99px;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
-    box-shadow: 2px 4px 18px var(--color-camel);
+    border-radius: 4px;
+
 }
 
-.about-content h2 {
+
+.about-content h3 {
+    letter-spacing: 3px;
+    font-size: 15px;
+    color: var(--color-text-muted);
+}
+
+.about-content .highlight-text {
     font-size: 42px;
     margin-bottom: 30px;
+    /* padding: 0px 10px; */
+
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    border-bottom: 1px solid var(--color-secondary);
+
 }
 
-.about-content h2::after {
+
+/* LINE HIGHLIGHT */
+/* SWEEP LIGHT */
+.highlight-text::before {
     content: "";
-    display: block;
-    width: 200px;
-    height: 1px;
-    background: var(--color-camel);
-    margin-top: 20px;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg,
+            transparent,
+            rgba(67, 42, 42, 0.329),
+            transparent);
 }
+
+/* TRIGGER */
+.aos-animate.highlight-text::before {
+    animation: sweep 5s ease forwards;
+}
+
+@keyframes sweep {
+    to {
+        left: 100%;
+    }
+}
+
+
 
 .about-content p {
     font-size: 16px;
@@ -51,6 +88,7 @@
     .about-container {
         grid-template-columns: 1fr;
         gap: 50px;
+        padding: 10px;
     }
 
     .about-image img {
@@ -60,5 +98,17 @@
     .about-content {
         text-align: center;
         margin: 0 auto;
+    }
+
+    .about-content h2 {
+        font-size: 24px;
+    }
+
+    .about-content h2::after {
+        width: 100%;
+    }
+
+    .about-content p {
+        font-size: 13px;
     }
 }

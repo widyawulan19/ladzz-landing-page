@@ -1,6 +1,22 @@
 .experience {
     padding: 100px 0;
-    background: var(--color-background);
+    background: linear-gradient(to bottom,
+            #f1f1f1,
+            #ffffff);
+    /* background: var(--color-bg-soft); */
+}
+
+.experience-section::after {
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle,
+            rgba(0, 0, 0, 0.03),
+            transparent 70%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .experience-container {
@@ -15,6 +31,11 @@
     margin: 0 auto 100px;
 }
 
+.experience-header .section-label {
+    letter-spacing: 2px;
+    color: var(--text-dark);
+}
+
 .experience-header h2 {
     font-size: 42px;
     margin-bottom: 20px;
@@ -23,7 +44,7 @@
 .experience-header p {
     font-size: 16px;
     line-height: 1.9;
-    color: var(--color-cocoa);
+    color: var(--color-text-soft);
 }
 
 .experience-steps {
@@ -33,9 +54,13 @@
 }
 
 .step-number {
-    font-size: 12px;
-    letter-spacing: 3px;
-    color: var(--color-camel);
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 14px;
+    /* opacity: 0.4; */
+    /* font-size: 12px;
+    letter-spacing: 3px;*/
+    color: var(--color-text-muted);
 }
 
 .step h3 {
@@ -46,7 +71,7 @@
 .step p {
     font-size: 14px;
     line-height: 1.8;
-    color: var(--color-cocoa);
+    color: var(--color-text-soft);
 }
 
 
