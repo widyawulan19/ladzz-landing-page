@@ -20,7 +20,7 @@
     justify-content: space-between;
 }
 
-.logo {
+.navbar .logo {
     font-family: 'Playfair Display', serif;
     font-size: 20px;
     letter-spacing: 3px;

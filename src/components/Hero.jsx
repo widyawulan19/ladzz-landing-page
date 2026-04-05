@@ -11,6 +11,10 @@ const Hero=()=> {
       navigate('/collection')
   }
 
+  const goToCatalog = () =>{
+    navigate('/catalog')
+  }
+
     const [scrolled, setScrolled] = useState(false);
   
     useEffect(() => {
@@ -43,10 +47,13 @@ const Hero=()=> {
                 <h1 data-aos='fade-up'>Where Elegance Becomes Personal</h1>
                 <p data-aos='fade-up'> Designed for women who appreciate subtle luxury, LADZZ Boutique brings together refined silhouettes and timeless artistry.
                 </p>
-                <button className="btn-primary">
-                  <a href="#collection"> View Our Collection</a>
+                <button onClick={goToCatalog} className="btn-primary">
+                  <a> View Our Collection</a>
                 </button>
-                {/* <button className="btn-primary" onClick={handleClick}>Explore Collection</button> */}
+
+                {/* <button className="btn-primary">
+                  <a href="#collection"> View Our Collection</a>
+                </button> */}
             </div>
       </div>
     </section>

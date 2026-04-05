@@ -16,9 +16,15 @@ import coll7 from '../assets/collection/coll7.png'
 
 import AOS from 'aos'
 import { useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 
 const Collection = () => {
+  const navigate = useNavigate()
+
+  const goToCollection = () =>{
+    navigate('/catalog')
+  }
 
   useEffect(()=>{
     AOS.init({
@@ -69,7 +75,7 @@ const Collection = () => {
 
         </div>
 
-        <div className="collection-footer" data-aos='fade-up'>
+        <div className="collection-footer" data-aos='fade-up' onClick={goToCollection}>
             <a href="#">View Full Collection</a>
         </div>
 
