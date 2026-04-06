@@ -7,6 +7,7 @@ import img3 from '../assets/clothes/kebaya/kebaya-3.jpg'
 
 function KebayaCatalog() {
     const [selectedImg, setSelectedImg] = useState(null);
+    const [loadedImages, setLoadedImages] = useState({});
 
     const dataKebaya = [
         {id:1, img:img},
@@ -30,7 +31,10 @@ function KebayaCatalog() {
                     <img 
                         src={item.img} 
                         alt="Simple Dress Photo" 
-                        className='dress-img'
+                        className={`dress-img ${loadedImages[item.id] ? 'loaded' : ''}`}
+                        onLoad={() => 
+                            setLoadedImages(prev => ({ ...prev, [item.id]: true }))
+                        }
                     />
                 </div>
         ))}

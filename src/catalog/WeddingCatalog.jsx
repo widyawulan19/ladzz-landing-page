@@ -9,6 +9,7 @@ import img5 from '../assets/clothes/wedding_gorwn/cf7047d7-5893-4a80-a09a-7d4757
 
 function WeddingCatalog() {
     const [selectedImg, setSelectedImg] = useState(null);
+    const [loadedImages, setLoadedImages] = useState({});
     
     const dataWeddingGown = [
         {id:1, img:img},
@@ -34,8 +35,11 @@ function WeddingCatalog() {
                 >
                     <img 
                         src={item.img} 
-                        alt="Simple Dress Photo" 
-                        className='dress-img'
+                        alt="Simple Dress Photo"
+                        className={`dress-img ${loadedImages[item.id] ? 'loaded' : ''}`}
+                        onLoad={() => 
+                            setLoadedImages(prev => ({ ...prev, [item.id]: true }))
+                        }
                     />
                 </div>
         ))}

@@ -11,6 +11,7 @@ import img6 from '../assets/clothes/evening_gown/evening-gown-6.jpg'
 
 function EveningGown() {
     const [selectedImg, setSelectedImg] = useState(null);
+    const [loadedImages, setLoadedImages] = useState({});
 
     const dataEveningGown = [
         {id:1, img:img},
@@ -38,7 +39,10 @@ function EveningGown() {
                     <img 
                         src={item.img} 
                         alt="Simple Dress Photo" 
-                        className='dress-img'
+                        className={`dress-img ${loadedImages[item.id] ? 'loaded' : ''}`}
+                        onLoad={() => 
+                            setLoadedImages(prev => ({ ...prev, [item.id]: true }))
+                        }
                     />
                 </div>
         ))}

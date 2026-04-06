@@ -10,6 +10,7 @@ import img6 from '../assets/clothes/simple_dress/simple-dress-6.jpg'
 
 function SimpleDress() {
     const [selectedImg, setSelectedImg] = useState(null);
+    const [loadedImages, setLoadedImages] = useState({});
 
     const dataSimpleDress = [
         {
@@ -56,7 +57,10 @@ function SimpleDress() {
                     <img 
                         src={item.img} 
                         alt="Simple Dress Photo" 
-                        className='dress-img'
+                        className={`dress-img ${loadedImages[item.id] ? 'loaded' : ''}`}
+                        onLoad={() => 
+                            setLoadedImages(prev => ({ ...prev, [item.id]: true }))
+                        }
                     />
                 </div>
         ))}
@@ -67,7 +71,7 @@ function SimpleDress() {
             <img 
                 src={selectedImg} 
                 className="modal-img"
-                onClick={(e) => e.stopPropagation()} 
+                onClick={(e) => e.stopPropagation()}
             />
             </div>
         )}

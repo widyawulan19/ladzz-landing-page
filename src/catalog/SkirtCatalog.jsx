@@ -12,6 +12,7 @@ import img7 from '../assets/clothes/skirt_pants/ready-to-wear-7.jpg'
 
 function SkirtCatalog() {
     const [selectedImg, setSelectedImg] = useState(null);
+    const [loadedImages, setLoadedImages] = useState({});
 
     const dataSkirt = [
         {id:1, img:img},
@@ -39,7 +40,10 @@ function SkirtCatalog() {
                     <img 
                         src={item.img} 
                         alt="Simple Dress Photo" 
-                        className='dress-img'
+                        className={`dress-img ${loadedImages[item.id] ? 'loaded' : ''}`}
+                        onLoad={() => 
+                            setLoadedImages(prev => ({ ...prev, [item.id]: true }))
+                        }
                     />
                 </div>
         ))}

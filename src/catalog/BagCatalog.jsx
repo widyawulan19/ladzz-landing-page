@@ -8,6 +8,7 @@ import img2 from '../assets/clothes/bag/ready-to-wear-30.jpg'
 
 function BagCatalog() {
     const [selectedImg, setSelectedImg] = useState(null);
+    const [loadedImages, setLoadedImages] = useState({});
 
     const dataBag = [
         {id:1, img:img},
@@ -32,7 +33,10 @@ function BagCatalog() {
                     <img 
                         src={item.img} 
                         alt="Bag Photo" 
-                        className='dress-img'
+                        className={`dress-img ${loadedImages[item.id] ? 'loaded' : ''}`}
+                        onLoad={() => 
+                            setLoadedImages(prev => ({ ...prev, [item.id]: true }))
+                        }
                     />
                 </div>
         ))}

@@ -14,7 +14,7 @@ import { IoMdArrowDropdown } from "react-icons/io";
 import { useNavigate } from 'react-router-dom';
 
 function CatalogPage() {
-    const [activeMenu, setActiveMenu] = useState("bag");
+    const [activeMenu, setActiveMenu] = useState("simple dress");
     const navigate = useNavigate();
 
     const goToLanding = () =>{
@@ -48,7 +48,7 @@ function CatalogPage() {
             <span>Ladzz Catalog Collection</span>
         </div>
 
-        <div className="catalog-sidebar" style={{display:"flex"}}>
+        <div className="catalog-sidebar">
             <div className="sidebar">
                 <button className='cat-btn'>Category <IoMdArrowDropdown size={20}/></button>
                 {menu.map((menu) =>(
