@@ -7,6 +7,12 @@ import img3 from '../assets/clothes/evening_gown/evening-gown-3.jpg'
 import img4 from '../assets/clothes/evening_gown/evening-gown-4.jpg'
 import img5 from '../assets/clothes/evening_gown/evening-gown-5.jpg'
 import img6 from '../assets/clothes/evening_gown/evening-gown-6.jpg'
+import img7 from '../assets/clothes/evening_gown/evening-gown-7.jpg'
+import img8 from '../assets/clothes/evening_gown/evening-gown-8.jpg'
+import img9 from '../assets/clothes/evening_gown/evening-gown-9.jpg'
+import img10 from '../assets/clothes/evening_gown/evening-gown-10.jpg'
+import img11 from '../assets/clothes/evening_gown/evening-gown-11.jpg'
+import img12 from '../assets/clothes/evening_gown/evening-gown-12.jpg'
 
 
 function EveningGown() {
@@ -19,7 +25,13 @@ function EveningGown() {
         {id:3, img:img3},
         {id:4, img:img4},
         {id:5, img:img5},
-        {id:6, img:img6},
+        {id:6, img:img6},        
+        {id:7, img:img7},
+        {id:8, img:img8},
+        {id:9, img:img9},
+        {id:10, img:img10},
+        {id:11, img:img11},
+        {id:12, img:img12},
     ]
 
   return (
